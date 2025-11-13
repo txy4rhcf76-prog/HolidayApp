@@ -1,0 +1,16 @@
+# version: '3.8'
+# services:
+#   mssql:
+#     image: mcr.microsoft.com/mssql/server:2019-CU16-ubuntu-20.04
+#     container_name: sql2
+#     environment:
+#       SA_PASSWORD: "Nd22Wq)6"
+#       ACCEPT_EULA: "Y"
+#     ports:
+#       - "1433:1433"
+#     healthcheck:
+#       test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P \"Nd22Wq)6\" -Q \"SELECT 1\" || exit 1"]
+#       interval: 10s
+#       retries: 10
+#     restart: unless-stopped
+# docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=2Secure*Password2" -p 1433:1433 --name sqlserverdb -h mysqlserver -d mcr.microsoft.com/mssql/server:2022-latest
