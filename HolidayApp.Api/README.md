@@ -15,7 +15,8 @@ How to run
 3. From the project folder, add EF tools (if not installed):
 
 ```bash
-dotnet tool install --global dotnet-ef
+dotnet tool install --global dotnet-ef --version "10.0.0"
+export PATH="$PATH:/Users/ardemirkan/.dotnet/tools"
 ```
 
 4. Create the initial migration and update database:
@@ -31,6 +32,7 @@ dotnet ef database update --project .
 ```bash
 dotnet run --project HolidayApp.Api
 ```
+The API will listen on `http://localhost:5000` by default.
 
 6. Use the Swagger UI (if in Development) at `http://localhost:5000/swagger` to try endpoints. Example flows:
 
